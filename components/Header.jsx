@@ -19,26 +19,26 @@ export default function Header() {
 
     return (
         <>
-            <div className="grid grid-cols-5 gap-2 md:grid-cols-3 items-center bg-zinc-700/20 max-w-3xl mx-auto my-4 p-3 rounded-xl shadow-md">
+            <div className="grid grid-cols-7 gap-2 md:grid-cols-3 items-center bg-zinc-700/20 max-w-3xl mx-auto my-4 p-3 rounded-xl shadow-md">
                 <Image 
                     src='/icon.png'
                     width={40}
                     height={40}
                     alt="Logo"
-                    className='cursor-pointer'
+                    className='cursor-pointer col-span-2 md:col-span-1'
                     onClick={() => router.push('/')}
                 />
-                <h1 className={`${nunito.className} col-span-3 md:col-span-1 font-sans font-extrabold capitalize text-xl text-center`}>
+                <h1 className={`${nunito.className} col-span-3 md:col-span-1 font-sans font-extrabold capitalize text-lg md:text-xl text-center`}>
                     {segments.length ? (
                         <div className='flex items-center gap-2 justify-center'>
-                            <Icon icon={emote} className="text-2xl" />
-                            {segments[0]} Mood
+                            <Icon icon={emote} className="text-xl sm:text-2xl" />
+                            <span className='text-left leading-tight'>{segments[0]} Mood</span>
                         </div>
                     ) : "Movies4Mood"}
                 </h1>
-                <div className='text-right'>
+                <div className='text-right col-span-2 md:col-span-1'>
                     {segments.length ? (
-                        <button onClick={() => router.push('/')} className='bg-pink-600 font-semibold text-sm md:text-base px-3 py-2 rounded-lg'>
+                        <button onClick={() => router.push('/')} className='bg-pink-600 font-semibold text-sm md:text-base px-1.5 py-1 sm:px-3 sm:5py-2 rounded-lg'>
                             Change Mood
                         </button>
                     ) : ""}
