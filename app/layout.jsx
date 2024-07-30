@@ -13,6 +13,15 @@ const nunito = Nunito({
 export const metadata = {
     title: "Movies4Mood",
     description: "Discover the Best Movies to Match Your Mood",
+    keywords: [
+        'Movies',
+        'Stream',
+        'Watch',
+        'Full Movie',
+    ],
+    openGraph: {
+        images: '/seo_hero.jpg',
+    },
 };
 
 
