@@ -18,7 +18,7 @@ export default function Home() {
                 <div className="py-6">
                     <div className="text-center">
                         <h1 className={`${nunito.className} mt-4 font-sans font-extrabold md:font-black text-4xl md:text-5xl antialiased`}>
-                            Discover the Best Movies to Match Your Mood
+                            Find Movie Recommendations Based on Your Mood
                         </h1>
                         <p className="text-xl my-6">What is your mood right now?</p>
                     </div>

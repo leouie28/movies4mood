@@ -12,12 +12,19 @@ const nunito = Nunito({
 
 export const metadata = {
     title: "Movies4Mood",
-    description: "Discover the Best Movies to Match Your Mood",
+    description: "Find Movie Recommendations Based on Your Mood",
     keywords: [
         'Movies',
         'Stream',
         'Watch',
         'Full Movie',
+        'Serries',
+        'Anime',
+        'Cartoons',
+        'Animations',
+        'Actions',
+        'Drama',
+        'Science Fictions'
     ],
     openGraph: {
         images: '/seo_hero.jpg',
@@ -28,6 +35,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <head>
+                {process.env.ENVIRONMENT_TYPE === 'prod' && (
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2903325451480987"
+                    crossorigin="anonymous"></script>
+                )}
+            </head>
             <body className={montserrat.className}>
                 <header>
                     <Container>
