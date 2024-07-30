@@ -3,6 +3,7 @@ import "./globals.css";
 import Container from "@/components/Container";
 import Header from "@/components/Header";
 import { Icon } from '@iconify-icon/react';
+import Script from "next/script";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const nunito = Nunito({
@@ -36,9 +37,19 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
+                <Script async src="https://www.googletagmanager.com/gtag/js?id=G-T9887RRJ3B"></Script>
+                <Script id="google-analytics">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-T9887RRJ3B');
+                    `}
+                </Script>
                 {process.env.ENVIRONMENT_TYPE === 'prod' && (
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2903325451480987"
-                    crossorigin="anonymous"></script>
+                    <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2903325451480987"
+                    crossorigin="anonymous"></Script>
                 )}
             </head>
             <body className={montserrat.className}>
