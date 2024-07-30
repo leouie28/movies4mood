@@ -39,12 +39,12 @@ export default async function DetailsPage({ params }) {
                         />
                     )}
                     <div className='p-6 space-y-3'>
-                        <h1 className='font-bold text-3xl'>{data?.title} <span className='text-gray-400 font-medium'>({data.release_date.split("-")[0]})</span></h1>
+                        <h1 className='font-bold text-xl sm:text-3xl'>{data?.title} <span className='text-gray-400 font-medium'>({data.release_date.split("-")[0]})</span></h1>
                         <div className='text-gray-400'>
                             {minutesToHours(data.runtime)} · ⭐ {data.vote_average.toFixed(1)}/10
                         </div>
                         <div className='border border-pink-600 inline-block px-2 rounded-full text-sm font-bold text-pink-600'>{data.genres[0].name}</div>
-                        <p className='text-gray-300'>{data.overview}</p>
+                        <p className='text-gray-300 text-sm sm:text-base'>{data.overview}</p>
                         {data.providers?.link ? (
                             <a className='px-3 cursor-pointer py-2 inline-flex items-center gap-2 rounded-xl bg-pink-600' href={data.providers?.link} target='_blank'>
                                 <span>View watch options</span>

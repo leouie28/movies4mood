@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
                     crossorigin="anonymous"></Script>
                 )}
             </head>
-            <body className={montserrat.className}>
+            <body className={`${montserrat.className} text-gray-300`}>
                 <header>
                     <Container>
                         <Header/>
